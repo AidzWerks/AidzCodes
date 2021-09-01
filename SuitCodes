@@ -1,0 +1,113 @@
+ =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+ *  Project: Aidz
+ *  Author: Aidz Achmidt                                                       
+ *  Developer: Aidz Achmidt                         
+ *  License: github.com/AidzWerks              
+ *  © 2020 Aidz Achmidt Development
+ *  All rights reserved             
+ *  Dont remove credits from the development team of the gamemode "AIDZ"
+ 
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+CMD:suit(playerid, params[])
+{
+	if(sscanf(params, "s[32]", params))
+	{
+	    SendClientMessage(playerid, COLOR_WHITE, "USAGE:/suit [NUMBER]");
+	    SendClientMessage(playerid, COLOR_WHITE, "suitMENTS:0.OFF 1.Newbie Kit 2.Protection suitments 3.Vest 4.Helmet And Vest 5.Fire 6.Guitar And Knife");
+	    SendClientMessage(playerid, COLOR_WHITE, "GLASSES:7.#1 Glasses 8.#2 Glasses 9.#3 Glasses 10.#4 Glasses 11.#5 Glasses 12.#6 Glasses 13.#7 Glasses 14.#8 Glasses ");
+	    return 1;
+	}
+	if(!strcmp(params, "0", true))
+	{
+	     RemovePlayerAttachedObject(playerid, 0);
+	     RemovePlayerAttachedObject(playerid, 1);
+	     RemovePlayerAttachedObject(playerid, 2);
+	     RemovePlayerAttachedObject(playerid, 3);
+	     RemovePlayerAttachedObject(playerid, 4);
+	     RemovePlayerAttachedObject(playerid, 5);
+	     RemovePlayerAttachedObject(playerid, 6);
+	     RemovePlayerAttachedObject(playerid, 7);
+	     RemovePlayerAttachedObject(playerid, 8);
+	     RemovePlayerAttachedObject(playerid, 9);
+	     RemovePlayerAttachedObject(playerid, 10);
+	     SendClientMessage(playerid, COLOR_WHITE, "You have unsuited all suited toys.");
+	}
+	else if(!strcmp(params, "1", true))
+	{
+	     SetPlayerAttachedObject(playerid, 0, 18642, 6, 0.06, 0.01, 0.08, 180.0, 0.0, 0.0);
+	     SetPlayerAttachedObject(playerid, 1, 3026, 1, -0.16, -0.08, 0.0, 0.5, 0.5, 0.0);
+	     SetPlayerAttachedObject(playerid, 2, 19141, 2, 0.094478, 0.007213, 0.000000, 0.000000, 0.000000, 0.000000, 1.200000, 1.200000, 1.200000 );
+	     SendClientMessage(playerid, COLOR_WHITE, "You have suited a NEWBIE KIT.");
+	}
+	else if(!strcmp(params, "2", true))
+	{
+	     SetPlayerAttachedObject(playerid, 3, 19142,  1, 0.1,  0.05, 0.0,  0.0,   0.0,   0.0);
+         SetPlayerAttachedObject(playerid, 4, 19141,  2, 0.11, 0.0,  0.0,  0.0,   0.0,   0.0);
+         SetPlayerAttachedObject(playerid, 6, 18642,  7, 0.1,  0.0, -0.11, 0.0, -90.0,  90.0);
+	     SendClientMessage(playerid, COLOR_WHITE, "You have suited a PROTECTION EQUPMENTS.");
+	}
+	else if(!strcmp(params, "3", true))
+	{
+	     SetPlayerAttachedObject(playerid, 7, 19142,  1, 0.1,  0.05, 0.0,  0.0,   0.0,   0.0);
+	     SendClientMessage(playerid, COLOR_WHITE, "You have suited a VEST.");
+	}
+	else if(!strcmp(params, "4", true))
+	{
+	     SetPlayerAttachedObject(playerid, 8, 19142,  1, 0.1,  0.05, 0.0,  0.0,   0.0,   0.0);
+	     SetPlayerAttachedObject(playerid, 9, 19141, 2, 0.094478, 0.007213, 0.000000, 0.000000, 0.000000, 0.000000, 1.200000, 1.200000, 1.200000);
+	     SendClientMessage(playerid, COLOR_WHITE, "You have suited a Helmet and Vest.");
+	}
+	else if(!strcmp(params, "5", true))
+	{
+        SetPlayerAttachedObject(playerid, 0, 18688, 2, 0.198999, 0.011000, -1.566999, 0.000000, 0.000000, 0.000000, 1.000000, 1.000000, 1.000000);
+        SendClientMessage(playerid, COLOR_WHITE, "You have suited a Fire.");
+	}
+	else if(!strcmp(params, "6", true))
+	{
+	    SetPlayerAttachedObject(playerid, 1, 19590, 5, 0.068999, 0.007000, -0.046000, 65.699996, -81.899963, 0.000000, 1.000000, 1.000000, 1.000000);
+        SetPlayerAttachedObject(playerid, 2, 19319, 1, 0.181999, -0.125000, 0.000000, 5.800001, 52.399986, -5.100000, 1.000000, 1.000000, 1.000000);
+        SendClientMessage(playerid, COLOR_WHITE, "You have suited a Guitar And Knife.");
+	}
+	else if(!strcmp(params, "7", true))
+	{
+	    SetPlayerAttachedObject(playerid,9,19016,2,0.1,0.04,0.0,60.0,85.0,25.0,1.0,1.0,1.0);
+        SendClientMessage(playerid, COLOR_WHITE, "You have suited a Glasses.");
+	}
+	else if(!strcmp(params, "8", true))
+	{
+	    SetPlayerAttachedObject(playerid,9,19017,2,0.1,0.04,0.0,60.0,85.0,25.0,1.0,1.0,1.0);
+        SendClientMessage(playerid, COLOR_WHITE, "You have suited a Glasses.");
+	}
+	else if(!strcmp(params, "9", true))
+	{
+	    SetPlayerAttachedObject(playerid,9,19018,2,0.1,0.04,0.0,60.0,85.0,25.0,1.0,1.0,1.0);
+        SendClientMessage(playerid, COLOR_WHITE, "You have suited a Glasses.");
+	}
+	else if(!strcmp(params, "10", true))
+	{
+	    SetPlayerAttachedObject(playerid,9,19019,2,0.1,0.04,0.0,60.0,85.0,25.0,1.0,1.0,1.0);
+        SendClientMessage(playerid, COLOR_WHITE, "You have suited a Glasses.");
+	}
+	else if(!strcmp(params, "11", true))
+	{
+	    SetPlayerAttachedObject(playerid,9,19020,2,0.1,0.04,0.0,60.0,85.0,25.0,1.0,1.0,1.0);
+        SendClientMessage(playerid, COLOR_WHITE, "You have suited a Glasses.");
+	}
+	else if(!strcmp(params, "12", true))
+	{
+	    SetPlayerAttachedObject(playerid,9,19021,2,0.1,0.04,0.0,60.0,85.0,25.0,1.0,1.0,1.0);
+        SendClientMessage(playerid, COLOR_WHITE, "You have suited a Glasses.");
+	}
+	else if(!strcmp(params, "13", true))
+	{
+	    SetPlayerAttachedObject(playerid,9,19022,2,0.1,0.04,0.0,60.0,85.0,25.0,1.0,1.0,1.0);
+        SendClientMessage(playerid, COLOR_WHITE, "You have suited a Glasses.");
+	}
+	else if(!strcmp(params, "13", true))
+	{
+	    SetPlayerAttachedObject(playerid,9,19023,2,0.1,0.04,0.0,60.0,85.0,25.0,1.0,1.0,1.0);
+        SendClientMessage(playerid, COLOR_WHITE, "You have suited a Glasses.");
+	}
+    return 1;
+}
